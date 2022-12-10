@@ -1,14 +1,11 @@
 package telran.java2022.accounting.service;
 
-import java.time.LocalDate;
-
+import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import lombok.RequiredArgsConstructor;
 import telran.java2022.accounting.dao.UserAccountRepository;
 import telran.java2022.accounting.dto.RolesResponseDto;
 import telran.java2022.accounting.dto.UserAccountResponseDto;
@@ -18,8 +15,11 @@ import telran.java2022.accounting.dto.exceptions.UserExistsException;
 import telran.java2022.accounting.dto.exceptions.UserNotFoundException;
 import telran.java2022.accounting.model.UserAccount;
 
+import java.time.LocalDate;
+
 @Service
 @RequiredArgsConstructor
+
 public class UserAccountServiceImpl implements UserAccountService, CommandLineRunner {
 	final UserAccountRepository repository;
 	final ModelMapper modelMapper;

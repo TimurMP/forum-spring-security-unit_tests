@@ -1,19 +1,18 @@
 package telran.java2022.accounting.model;
 
+import lombok.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-
 @Getter
 @EqualsAndHashCode(of = {"login"})
 @Document(collection = "users")
+//@Builder
+//@AllArgsConstructor
 public class UserAccount {
 	@Id
 	String login;
